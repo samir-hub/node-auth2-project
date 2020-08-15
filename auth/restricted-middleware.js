@@ -15,7 +15,7 @@ module.exports = (req, res, next) => {
           res.status(401).json({ message: 'Invalid Credentials' });
         }
       })
-      .catch(error => {
+      .catch(() => {
         res.status(500).json({ message: 'Ran into an unexpected error' });
       });
   } else {
